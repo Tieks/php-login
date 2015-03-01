@@ -10,14 +10,14 @@ $query = mysql_query("SELECT * FROM USERS WHERE login='$name'");
 $data = mysql_fetch_array($query);
 if($_POST['pwd'] == $data['password']) { 
 session_register("name");
-header("Location: yourpage.php"); // success page. put the URL you want 
+header("Location: index.php"); // success page. put the URL you want 
 exit;
 } else {
-header("Location: login.php?login=failed&cause=".urlencode('Wrong Password'));
+header("Location: login.php?login=failed&cause=".urlencode('Invalid Username or Password'));
 exit;
 }
 } else {
-header("Location: login.php?login=failed&cause=".urlencode('Invalid User'));
+header("Location: login.php?login=failed&cause=".urlencode('Invalid Username or Password'));
 exit;
 }
 }
