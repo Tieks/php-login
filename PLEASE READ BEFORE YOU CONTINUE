@@ -1,0 +1,11 @@
+Please configure your SQL database in the connect.php directory, and add run the configurations.sql file before trying to start anything.
+
+Ad this code in the head of the pages that you want to secure.
+
+<?
+require("log.php");
+?>
+
+If you want to display the name currently logged in on the site, add this code were you want it to be.
+
+<? print $_SESSION["name"]; ?>
